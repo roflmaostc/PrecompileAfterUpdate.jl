@@ -1,0 +1,22 @@
+name = "PrecompileAfterUpdate"
+uuid = "9a8c767f-158d-41a6-96f9-54dc897bf7e9"
+authors = ["roflmaostc <fxw+git@mailbox.org> and contributors"]
+version = "0.1.0"
+
+[deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+TOML = "fa267f1f-6049-4f14-aa54-33bafae1ed76"
+
+[compat]
+julia = "1.6"
+Pkg = "1"
+TOML = "1"
+
+[extras]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "Pkg", "Dates"]
