@@ -27,7 +27,7 @@ Precompiling project...
 ```
 
 ## Increase number of stored precompilation files
-Julia only stored [10 different precompilation files for a package by default](https://docs.julialang.org/en/v1/manual/environment-variables/#env-max-num-precompile-files).
+Julia only stores [10 different precompilation files for a package by default](https://docs.julialang.org/en/v1/manual/environment-variables/#env-max-num-precompile-files).
 In my case, I set `export JULIA_MAX_NUM_PRECOMPILE_FILES=50` to have a maximum amount of 50 files. This number is most likely high enough. But be aware that this can make your `.julia` folder larger.
 
 
