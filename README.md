@@ -4,9 +4,9 @@
 **TLDR**: Run `PrecompileAfterUpdate.precompile()` after an Julia update, wait some minutes and enjoy the next weeks without unexpected precompilations.  
 
 ## Background
-This package serves one purpose. After upgrading Julia to a new version, often unexpected precompilations can happen when the non-default environment is used because packages need to be precompiled again for the new Julia version.
+This package serves one purpose. After upgrading Julia to a new version unexpected precompilations can happen when the non-default environment is used because packages need to be precompiled again for the new Julia version.
 This packages crawls through your existing manifest files and precompiles them if their last usage is within a certain timeframe.
-This can take sometimes a long time, on my machine like 30min or more, if many environments are precompiled.
+This can take some minutes if many environments are precompiled (on my desktop machine like 30 minutes or more).
 ```julia
 julia> using PrecompileAfterUpdate
 
