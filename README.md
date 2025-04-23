@@ -11,14 +11,18 @@ This can take some minutes if many environments are precompiled (on my desktop m
 julia> using PrecompileAfterUpdate
 
 help?> PrecompileAfterUpdate.precompile
-  precompile(fname=".julia/logs/manifest_usage.toml";
-                  time_diff=Dates.CompoundPeriod(Dates.Day(30)))
+    precompile(fname=".julia/logs/manifest_usage.toml";
+                    time_diff=Dates.CompoundPeriod(Dates.Day(30)))
 
+Precompile the environments listed in the TOML file `fname` if the last time
+they were used is greater than `time_diff`.
+`fname` is the path to the TOML file that contains the information about the last time
+an environment on your machine was used.
+As default `time_diff` is set to 30 days.
 
-  Precompile the environments listed in the TOML file fname if the last time they were used is greater than time_diff. fname is the path to the TOML file that contains the
-  information about the last time an environment on your machine was used. As default time_diff is set to 30 days.
+So this script precompiles the environments that were used in the last 30 days.
+This is especially useful to save time after updating Julia.
 
-  So this script precompiles the environments that were used in the last 30 days. This is especially useful to save time after updating Julia.
 
 julia> PrecompileAfterUpdate.precompile()
 [ Info: Precompiling /home/fxw/.julia/dev/SpatiallyVaryingConvolution.jl/Manifest.toml
