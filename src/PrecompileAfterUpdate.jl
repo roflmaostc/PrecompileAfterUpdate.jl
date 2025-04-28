@@ -13,7 +13,7 @@ As default `time_diff` is set to 30 days, so all manifests which have been activ
 `fname` is the path to the TOML file that contains the information about the last time an environment on your machine was used.
 
 So this script precompiles the environments that were used in the last 30 days.
-This is especially useful to save time after updating Julia.
+This is especially useful to save unexpected precompilation time after updating Julia 
 
 """
 function precompile(fname=joinpath(DEPOT_PATH[1], "logs/manifest_usage.toml"); time_diff=Dates.CompoundPeriod(Dates.Day(30)))
