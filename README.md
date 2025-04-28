@@ -23,10 +23,7 @@ As default `time_diff` is set to 30 days,
  about the last time an environment on your machine was used.
 
 So this script precompiles the environments that were used in the last 30 days.
-This is especially useful to save time after updating Julia.
-
-So this script precompiles the environments that were used in the last 30 days.
-This is especially useful to save time after updating Julia.
+This is especially useful to save unexpected precompilation time after updating Julia 
 
 
 julia> PrecompileAfterUpdate.precompile()
