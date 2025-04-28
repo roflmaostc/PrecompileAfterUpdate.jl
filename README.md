@@ -15,10 +15,15 @@ help?> PrecompileAfterUpdate.precompile
                     time_diff=Dates.CompoundPeriod(Dates.Day(30)))
 
 Precompile the environments listed in the TOML file `fname` if the last time
-they were used is greater than `time_diff`.
-`fname` is the path to the TOML file that contains the information about the last time
-an environment on your machine was used.
-As default `time_diff` is set to 30 days.
+ they were used is smaller than `time_diff`.
+As default `time_diff` is set to 30 days,
+ so all manifests which have been activated in the last 30 days are precompiled.
+
+`fname` is the path to the TOML file that contains the information
+ about the last time an environment on your machine was used.
+
+So this script precompiles the environments that were used in the last 30 days.
+This is especially useful to save time after updating Julia.
 
 So this script precompiles the environments that were used in the last 30 days.
 This is especially useful to save time after updating Julia.
